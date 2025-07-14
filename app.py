@@ -6,6 +6,7 @@ from PIL import Image
 import numpy as np
 import pandas as pd
 import plotly.express as px
+
 @st.cache_resource
 def carrega_modelo():
     url = 'https://drive.google.com/uc?id=1GpWix8dp6FeFAs6g0etbnw_avu9Aflfp'
@@ -28,7 +29,7 @@ def carrega_imagem():
 
         image = image/255.0
         image = np.expand_dims(image, axis=0)
-        return image
+    return image
 
 def main():
     st.set_page_config(
